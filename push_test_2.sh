@@ -11,6 +11,7 @@ git config --global user.name "Your Name"
 
 echo "foo\nboo" > README.md
 BRANCH="conflict_$(uuidgen)"
+git fetch origin
 git checkout -b $BRANCH 
 git add * 
 git commit -m 'merge conflicts...'
