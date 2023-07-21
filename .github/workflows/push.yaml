@@ -17,8 +17,22 @@ jobs:
         with:
           fetch-depth: 0
       
-      - name: Push updates
+      - name: Push updates to this repo
         run: |
           ./push.sh
         env:
           GH_TOKEN: ${{ github.token }}
+      
+      - name: Checkout pushTest2! 
+        uses: actions/checkout@v3
+        with:
+          repository: mjtalbot/pushTest2
+          path: downstream/pushTest2
+          token: ${{ secrets.PAT_GITHUB }}
+          fetch-depth: 0
+
+      - name: Push updates to pushTest2!
+        run: |
+          ./push_test_2.sh
+        env:
+          GH_TOKEN: ${{ secrets.PAT_GITHUB }}
