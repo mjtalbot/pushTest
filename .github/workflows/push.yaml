@@ -1,0 +1,20 @@
+name: Scheduled - alert prod diff
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 8am UTC every day, will run against the default / main branch
+    - cron:  '0 8 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      
+      - name: Push updates
+        run: |
+          ./push.sh
