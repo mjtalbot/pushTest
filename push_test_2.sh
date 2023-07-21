@@ -1,7 +1,10 @@
+set -e 
+
 cd downstream/pushTest2
 
+
 git remote remove origin 
-git remote add https://github.com/mjtalbot/pushTest2.git 
+git remote add origin https://github.com/mjtalbot/pushTest2.git 
 
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
