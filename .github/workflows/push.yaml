@@ -20,3 +20,5 @@ jobs:
       - name: Push updates
         run: |
           ./push.sh
+        env:
+          GH_TOKEN: ${{ github.token }}
