@@ -1,5 +1,7 @@
 name: Scheduled - alert prod diff
 
+permissions: write-all
+
 on:
   workflow_dispatch:
   schedule:
