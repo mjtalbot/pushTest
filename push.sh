@@ -1,3 +1,5 @@
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
 echo "foo\nboo" > README.md
 BRANCH="conflict_$(uuidgen)"
 git checkout -b $BRANCH 
