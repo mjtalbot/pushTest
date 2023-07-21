@@ -1,5 +1,5 @@
 echo "foo\nboo" > README.md
-BRANCH="conflict_$(uuidgen -r)"
+BRANCH="conflict_$(uuidgen)"
 git checkout -b $BRANCH 
 git add * 
 git commit -m 'merge conflicts...'
