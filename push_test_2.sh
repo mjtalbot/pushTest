@@ -1,7 +1,10 @@
+cd downstream/pushTest2
+
+git remote remove origin 
+git remote add https://github.com/mjtalbot/pushTest2.git 
+
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
-
-cd downstream/pushTest2
 
 echo "foo\nboo" > README.md
 BRANCH="conflict_$(uuidgen)"
